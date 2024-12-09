@@ -1,0 +1,4 @@
+
+var config=config||{};
+
+config.NTCE_RESULTS_LATEST_CONFIG={"ALLOW_THIRD_NON_LOGIN":0,"STATUS":0,"SUBJECT_CODE":"NTCE_RESULTS","QUERY_STATE":0,"NAME":"2019年下半年至2024年下半年中小学教师资格考试(NTCE)笔试"};

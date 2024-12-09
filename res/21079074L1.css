@@ -1,0 +1,731 @@
+@charset "utf-8";
+@font-face
+{
+  font-family:NeeaSimsun-Regular;
+  src:url(//www.neea.edu.cn/query/css/NeeaSimsun-Regular.woff);
+}
+/* CSS Document */
+/*html{max-width:640px;margin:0px auto;}*/
+* {margin: 0;padding: 0;outline: none;-webkit-box-sizing:border-box;}
+*:not{-webkit-touch-callout: inherit;-webkit-user-select: auto;}
+*:focus{outline:none;}
+body {width: 100%;-webkit-touch-callout: inherit ;-webkit-user-select: auto ;font-family:"微软雅黑",NeeaSimsun-Regular;margin:0px auto;font-size:14px;color:#000;background:#FFFFFF;word-wrap:break-word;}
+#Path{display:none;}
+video{width:100% !important;height:auto !important;object-fit:cover;}
+a{text-decoration: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+a:hover {text-decoration: none;}
+button,input,select,textarea,label{font-size: 100%;margin: 0;padding: 0;outline:none !important;-webkit-appearance: none;font-family:"微软雅黑";}
+input{font-family:"微软雅黑",NeeaSimsun-Regular;}
+dt,dd {display: inline-block;}
+table,td{border-collapse: collapse;}
+ul,ol,li {list-style: none;}
+em {font-style: normal;}
+img{max-width:100%;}
+.node-con img{height:auto !important}
+
+.fl{float: left;}
+.fr{float: right;}
+
+.displayFlex{
+    display: -moz-box;  /* Firefox */
+    display: -ms-flexbox;    /* IE10 */
+    display: -webkit-box;    /* Safari */ 
+    display: -webkit-flex;    /* Chrome, WebKit */
+    display: flex;
+}
+
+
+#Header {
+    padding-top: 105px;
+}
+.hdFile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background: #FFFFFF;
+}
+.hdTop{
+    padding: 10px;
+    justify-content: space-between;
+}
+.hdTop a{color:#000;}
+.hdTop .hdTop_logo{
+    width: 170px;max-height:41px;
+}
+.hdTop .hdTop_r{
+    padding-top: 10px;
+}
+.hdTop .hdTop_r_search{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22051584.png) 100% no-repeat;
+    background-size:cover;
+}
+.hdTop .hdTop_r_nav{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22051585.png) 100% no-repeat;
+    background-size:cover;
+}
+.hdNav {
+    width: 100%;
+    overflow-x: auto;
+}
+.hdNav i {
+    color: #FFFFFF;
+    position: fixed;
+    top: 75px;
+    right: 5px;
+    font-style: inherit;
+}
+.hdNav ul{
+    background: #003F7E;
+    justify-content: space-around;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1rem;
+    width: 230%;
+}
+.hdNav ul a{
+    color: #FFFFFF;
+}
+
+/*路径*/
+.pathAll {
+    border-bottom: 1px solid #eee;
+    padding: 10px 10px 5px;
+    color: #666;
+}
+.pathAll #PathID1 {
+    display: none;
+}
+.pathAll a {
+    color: #666;
+}
+
+.slide.linkImg {
+    padding: 10px;
+}
+.slide .swiper-slide{text-align:center;}
+.slide.linkImg .swiper-slide img {
+    width: 100%;
+}
+.slide.linkImg .swiper-slide span {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.6);
+    color: #FFFFFF;
+    padding: 5px 0;
+    font-size: 12px;
+}
+
+.newsItem{
+    padding: 10px;
+}
+.newsItem .newsItem_tit{
+    height: 31px;
+    border-bottom: 1px solid #F5F5F5;
+}
+.newsItem .newsItem_tit span{
+/*color: #003E7D;
+    line-height: 65px;*/
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+.newsItem .newsItem_tit span.active {
+    color: #EF7B19;
+    font-weight: bold;
+    border-bottom: 3px solid #EF7B19;
+    padding-bottom: 3px;
+}
+.newsItem .newsItem_tit a {
+    color: #A9A9A9;
+    font-size: 0.8rem;
+    line-height: 31px;
+    float: right;
+}
+.newsKey {
+    border-bottom: 1px solid #F5F5F5;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.newsKey p {
+    font-size: 0.9rem;
+    color: #909090;
+    line-height: 1.6;
+}
+.newsKey a {
+    font-size: 0.95rem;
+    color: #000;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    display: block;
+    padding: 0 10px;
+}
+.newsKey span#ReportIDLogograph {
+    color: #909090;
+    display: block;
+    padding: 0 10px;
+}
+.newsItem ul li{
+    position: relative;
+    padding: 5px 0 5px 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.newsItem ul li a{
+    font-size: 0.9rem;
+    color: #000;
+}
+.newsItem ul li::before{
+    content: '';
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050435.png) no-repeat;
+    background-size: cover;
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.newsItem ul li br,
+.newsList ul li br{display:none;}
+
+.newsItem_bottom{
+    border-bottom: 5px solid #F5F5F5;
+}
+.xfImgLink{
+    background: #F5F5F5;
+    padding: 20px 0;
+    justify-content: space-evenly;
+}
+
+/*首页考生服务*/
+.exnminee{
+    padding: 10px;
+    border-bottom: 5px solid #F5F5F5;
+}
+.exnminee-tit,
+.exnminee-tit2,
+.exnminee-tit3 {
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 10px;
+}
+.exnminee-tit i,
+.exnminee-tit2 i,
+.exnminee-tit3 i {
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050441.png) no-repeat;
+    background-size: cover;
+    margin-right: 5px;
+}
+.exnminee-tit2 i{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22051312.png) no-repeat;
+    background-size: cover;
+    width: 25px;
+    margin-right: 3px;
+}
+.exnminee-tit3 i{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/21080402.png) no-repeat;
+    background-size: cover;
+}
+.exnminee-tit span,
+.exnminee-tit2 span {
+    color: #EF7B19;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.exnminee-tit3 span {
+    color: #EF7B19;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.exnminee-tit div,
+.exnminee-tit2 div {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+}
+.exnminee-tit div img,
+.exnminee-tit2 div img {
+    width: 25px;
+}
+.exnminee-tit div a{color:#000;}
+
+.exnminee-icon ol {
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.exnminee-icon2 ol {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.exnminee-icon2 ol li {
+    background: #F5F5F5;
+    width: 24%;
+    line-height: 35px;
+    font-size: 16px;
+}
+.exnminee-icon2 ol li.active {
+    background: #EF7B19;
+}
+.exnminee-tab{
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.exnminee-icon ol li {
+    text-align: center;
+}
+.exnminee-icon ol li img {
+    height: 24px;
+}
+.exnminee-icon ol li span {
+    display: block;
+}
+.exnminee-icon ol li.active span {
+    color:#EF7B19;
+}
+.exnminee-bigcl{display:none;}
+.exnminee-tab2 {
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    justify-content: flex-start;
+margin-bottom: 10px;
+}
+.exnminee-tab span{
+    line-height: 2;
+    margin: 0 10px;
+}
+.exnminee-tab2 span {
+    line-height: 2;
+    margin: 0 10px;
+}
+.exnminee-tab span.active,
+.exnminee-tab2 span.active {
+    color: #EF7B19;
+    position: relative;
+}
+.exnminee-tab span.active::after,
+.exnminee-tab2 span.active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    border-bottom: 3px solid #EF7B19;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+}
+.exnminee .exnminee-ul,
+.exnminee .exnminee-ul2{
+   display:none;
+}
+.exnminee .exnminee-ul li,
+.exnminee .exnminee-ul2 li {
+    line-height: 2;
+    padding: 0 10px;
+}
+.exnminee .exnminee-ul li a,
+.exnminee .exnminee-ul2 li a {
+    color: #000;
+}
+.exnminee .exnminee-ul li.exnminee-more ,
+.exnminee .exnminee-ul2 li.exnminee-more{
+    text-align: center;
+    line-height: 2;
+/*border-top: 1px solid #F5F5F5;
+    margin-top: 10px;*/
+}
+.exnminee .exnminee-ul li.exnminee-more a,
+.exnminee .exnminee-ul2 li.exnminee-more a {
+    color: #A9A9A9;
+}
+
+
+#Footer {
+    background: #F5F5F5;
+    padding-bottom:10px;
+}
+.footer ol li a {
+    color: #303D5D;
+    font-size: 12px;
+    margin: 0 10px;
+}
+div#Footer .displayFlex {
+    justify-content: center;
+    padding: 10px 0 0;
+align-items: center;
+}
+div#Footer .displayFlex img {
+    width: 8vmin;
+    height: 8vmin;
+}
+div#Footer .displayFlex a {
+    color: #303D5D;
+}
+#Footer .displayFlex p {
+    color: #303D5D;
+    line-height: 1.6;
+    font-size: 3vmin;
+}
+#Footer .displayFlex p span{
+   margin:5px 5px;
+}
+.search_xl {
+    display: none;
+    background: #003F7E;
+    position: fixed;
+    top: 62px;
+    width: 100%;
+    z-index: 999;
+}
+.search_xl input[type=text] {
+    height: 30px;
+    margin: 10px 15px;
+    background: #EAEEF2;
+    border: none;
+    border-radius: 20px;
+    width: 75%;
+    text-indent: 1em;
+}
+.search_xl input[type=submit] {
+    float: right;
+    margin: 15px 20px 0 0;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+}
+.navRow {
+    position: fixed;
+    top: 58px;
+    right: -200px;
+    background: #FFF;
+    height: 100%;
+    z-index: 99;
+    overflow-y: auto;
+    padding: 15px;
+    box-shadow: -1px -1px 5px 0px #ccc;
+}
+.navRow::after{
+    content: '';
+    height: 360px;
+    /* background: url(../img/navbg.png) no-repeat; */
+    background-size: cover;
+    opacity: 0.1;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+.navRow .navRow_item {
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    width: 130px;
+    padding-left: 30px;
+    position: relative;
+}
+.navRow .navRow_item span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.navRow .navRow_item a {
+    display: block;
+    color: #003F7E;
+    line-height: 2;
+}
+.navRow .navRow_item i{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+}
+.navRow .navRow_item i.navRow_icon1{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22051585.png) no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon2{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050455.png) no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon3{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050457.png) no-repeat;
+    background-size: cover;
+    top: 4px;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon4{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22030032.png) no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon5{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050462.png) no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon6{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050456.png) no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon7{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050461.png) no-repeat;
+    background-size: cover;
+    top: 3px;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon8{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050458.png) no-repeat;
+    background-size: cover;
+    top: 3px;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon9{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050459.png) no-repeat;
+    background-size: cover;
+    top: 3px;
+    left: 0;
+}
+.navRow .navRow_item i.navRow_icon10{
+    background: url(https://cjcx.neea.edu.cn/res/Home/structure/22050460.png) no-repeat;
+    background-size: cover;
+    top: 3px;
+    left: 0;
+}
+
+/* 列表 */
+.hderTop {
+    border-bottom: 5px solid #003F7E;
+}
+.hderTop .hd_tit {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003F7E;
+    line-height: 34px;
+}
+.hderTop .return {
+    margin-top: 10px;
+}
+
+.newsList {
+    padding: 10px;
+}
+.newsList ul li {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;
+    position: relative;
+}
+.newsList ul li #ReportIDname a,.newsList ul li span#NodeTitle a{
+    line-height: 1.6;
+    display: block;
+    color: #000;
+    font-size: 1rem;
+}
+.newsList ul li #ReportIDIssueTime {
+    display: block;
+    margin-top: 5px;
+    color: #AEAEAE;
+}
+
+.newsList ul li::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #EF7B19;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+#PageNum{background:url(/tea/layui/css/modules/layer/default/loading-0.gif) center no-repeat;}
+
+.newstxt {
+    padding-top: 20px;
+}
+.newstxt span#ReportIDkicker {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+}
+.newstxt .newstxt_tit {
+    padding: 0 30px 20px;
+    line-height: 2;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.newstxt_tf {
+    background: #F2F2F2;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.newstxt_tf span {
+    color: #404040;
+    font-size: 0.8rem;
+    line-height: 23px;
+}
+.newstxt_tf img {
+    width: 20px;
+}
+.newstxt_txt {
+    padding: 20px;
+}
+
+.newstxt_txt p {
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.newstxt_txt table p {
+    font-size: inherit;
+}
+.newstxt_txt img{
+  height:auto!important;
+}
+.newstxt_txt #ReportIDtext table {
+    width: 100% !important;
+    border-collapse: collapse;
+}
+/*about*/
+.about_nav {
+    justify-content: space-around;
+    height: 45px;
+    line-height: 50px;
+    font-size: 0.9rem;
+    color: #777777;
+    background: #F9F9F9;
+}
+.about_nav a{color: #777777;}
+.about_nav #CurrentlyNode {
+    color: #EF7B19;
+    position: relative;
+}
+.about_nav #CurrentlyNode::after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 45px;
+    background: #EF7B19;
+    position: absolute;
+    top: 40px;
+    left: 6px;
+}
+
+/*搜索*/
+.searchHd {
+    background: #003F7E;
+    padding: 5px 10px 10px;
+    justify-content: space-around;
+}
+.searchHd input {
+    border: 0;
+    width: 80%;
+    height: 30px;
+    border-radius: 20px;
+    background: #EAEEF2;
+    text-indent: 16px;
+}
+.searchHd button {
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+    padding: 0 10px;
+}
+
+/*考试项目引导页*/
+.project_item {
+    padding: 15px;
+    border-bottom: 5px solid #F5F5F5;
+    overflow: hidden;
+}
+.project_item>p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003E7D;
+    margin-bottom: 10px;
+}
+.project_item .project_item_ul1 li {
+    width: 50%;
+    float: left;
+    padding: 5px 0;
+}
+.project_item .project_item_ul2 li {
+    padding: 5px 0;
+}
+.project_item a {
+    color: #414141;
+    font-size: 1rem;
+}
+
+/*首页友情链接*/
+.frlink::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.frlink .frlink-item {
+    float: left;
+    width: 50%;
+    color: #848893;
+    position: relative;
+    padding-left: 10px;
+}
+.frlink .frlink-item a {
+    color: #848893;
+}
+.frlink .frlink-item ul {
+   display:none;
+    height: 200px;
+    position: absolute;
+    bottom: 20px;
+    z-index: 999;
+    left: 0;
+    background: #FFFFFF;
+    padding: 10px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 7px 0px #ccc;
+}
+.frlink .frlink-item ul li {
+    line-height: 1.8;
+}
+.frlink .frlink-la i {
+    float: right;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #000;
+    margin-top: 4px;
+    margin-right: 20px;
+}
